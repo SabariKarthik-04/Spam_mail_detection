@@ -21,4 +21,4 @@ async def detect_spam(email: dict):
 
     logits = outputs.logits
     predicted_class = torch.argmax(logits, dim=1).item()
-    return {"prediction": "not spam" if predicted_class == 1 else "spam"}
+    return {"prediction": "not spam" if predicted_class == 0 else "spam"}
